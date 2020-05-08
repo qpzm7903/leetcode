@@ -40,4 +40,22 @@ public class Solution322 {
         }
         return status[amount] == amount + 1 ? -1 : status[amount];
     }
+
+    /**
+     * @since 2020-05-07
+     */
+    public int coinChange1(int[] coins, int amount) {
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, amount + 1);
+        dp[0] = 0;
+        for (int coin : coins) {
+            for (int i = 0; i <= amount; i++) {
+                if (i >= coin) {
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1 : dp[amount];
+    }
+
 }
