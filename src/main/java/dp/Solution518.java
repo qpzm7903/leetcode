@@ -6,5 +6,7 @@ package dp;
  */
 
 public class Solution518 {
-
+    public int change(int amount, int[] coins) {
+        return 1;
+    }
 }
