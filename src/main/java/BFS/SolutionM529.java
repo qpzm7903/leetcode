@@ -22,7 +22,9 @@ public class SolutionM529 {
         queue.add(new Integer[]{click[0], click[1]});
         while (!queue.isEmpty()) {
             Integer[] curr = queue.poll();
-
+            if (board[curr[0]][curr[1]]=='B'){
+                continue;
+            }
             int count = 0;
             for (int[] direction : directions) {
                 int i = curr[0] + direction[0];
