@@ -1,0 +1,28 @@
+package stack;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+/**
+ * @author qpzm7903
+ * @since 2020-05-16-16:02
+ */
+
+public class SolutionE496 {
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> map = new HashMap<>();
+        Stack<Integer> stack = new Stack<>();
+        for (int i = nums2.length - 1; i >= 0; i++) {
+            while (!stack.isEmpty() && nums2[i] >= stack.peek()) {
+                stack.pop();
+            }
+            map.put(nums2[i], stack.isEmpty() ? -1 : stack.peek());
+            stack.push(nums2[i]);
+        }
+        for (int i = 0; i < nums1.length; i++) {
+            nums1[i] = map.get(nums1[i]);
+        }
+        return nums1;
+    }
+}
