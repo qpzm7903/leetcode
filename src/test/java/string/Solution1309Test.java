@@ -1,26 +1,25 @@
 package string;
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution1309Test {
     @Test
     public void test_case1() {
         String s = "10#11#12";
-        assertThat(new Solution1309().freqAlphabets(s)).isEqualTo("jkab");
+        Assertions.assertEquals(new Solution1309().freqAlphabets(s), "jkab");
 
     }
 
     @Test
     public void test_case2() {
         String s = "1326#";
-        assertThat(new Solution1309().freqAlphabets(s)).isEqualTo("acz");
+        Assertions.assertEquals(new Solution1309().freqAlphabets(s), "acz");
     }
     @Test
     public void test_case3() {
         String s = "25#";
-        assertThat(new Solution1309().freqAlphabets(s)).isEqualTo("y");
+        Assertions.assertEquals(new Solution1309().freqAlphabets(s), "y");
     }
 
     @Test
@@ -42,7 +41,7 @@ public class Solution1309Test {
 
     @Test
     public void testConvert() {
-        assertThat(Solution1309.convert(1)).isEqualTo("a");
+        Assertions.assertEquals(Solution1309.convert(1), "a");
     }
 
 }

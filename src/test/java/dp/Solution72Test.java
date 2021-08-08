@@ -1,8 +1,7 @@
 package dp;
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 public class Solution72Test {
@@ -10,21 +9,21 @@ public class Solution72Test {
     public void test_() {
         Solution72 solution72 = new Solution72();
         int minDistance = solution72.minDistance("horse", "ros");
-        assertThat(minDistance).isEqualTo(3);
+        Assertions.assertEquals(minDistance, 3);
     }
 
     @Test
     public void test_1() {
         Solution72 solution72 = new Solution72();
         int minDistance = solution72.minDistance("", "a");
-        assertThat(minDistance).isEqualTo(1);
+        Assertions.assertEquals(minDistance, 1);
     }
 
     @Test
     public void test_2() {
         Solution72 solution72 = new Solution72();
         int minDistance = solution72.minDistance("distance", "springbok");
-        assertThat(minDistance).isEqualTo(9);
+        Assertions.assertEquals(minDistance, 9);
     }
 
 }

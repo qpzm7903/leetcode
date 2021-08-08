@@ -1,9 +1,8 @@
 package search.DFS;
 
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution695Test {
 
@@ -18,7 +17,7 @@ public class Solution695Test {
                         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
                         {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
                         {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
-        assertThat(new Solution695().maxAreaOfIsland(grid)).isEqualTo(6);
+        Assertions.assertEquals(new Solution695().maxAreaOfIsland(grid), 6);
 
     }
 
@@ -26,7 +25,7 @@ public class Solution695Test {
     public void testCase2() {
         int[][] grid =
                 {{0, 0, 0, 0, 0, 0, 0, 0}};
-        assertThat(new Solution695().maxAreaOfIsland(grid)).isEqualTo(0);
+        Assertions.assertEquals(new Solution695().maxAreaOfIsland(grid), 0);
 
     }
 

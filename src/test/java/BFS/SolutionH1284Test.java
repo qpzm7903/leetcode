@@ -1,8 +1,7 @@
 package BFS;
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class SolutionH1284Test {
 
@@ -10,7 +9,7 @@ public class SolutionH1284Test {
     public void test_() {
         SolutionH1284 solutionH1284 = new SolutionH1284();
         int minStep = solutionH1284.minFlips(new int[][]{{0, 0}, {0, 1}});
-        assertThat(minStep).isEqualTo(3);
+        Assertions.assertEquals(minStep, 3);
     }
 
 }

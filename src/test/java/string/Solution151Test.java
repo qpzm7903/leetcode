@@ -1,27 +1,26 @@
 package string;
 
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution151Test {
 
     @Test
     public void testCase1() {
         String input = "the sky is blue";
-        assertThat(new Solution151().reverseWords(input)).isEqualTo("blue is sky the");
+        Assertions.assertEquals(new Solution151().reverseWords(input), "blue is sky the");
     }
 
     @Test
     public void testCase2() {
         String input = "  hello world!  ";
-        assertThat(new Solution151().reverseWords(input)).isEqualTo("world! hello");
+        Assertions.assertEquals(new Solution151().reverseWords(input), "world! hello");
     }
 
     @Test
     public void testCase3() {
         String input = "a good   example";
-        assertThat(new Solution151().reverseWords(input)).isEqualTo("example good a");
+        Assertions.assertEquals(new Solution151().reverseWords(input), "example good a");
     }
 }

@@ -1,17 +1,16 @@
 package dp;
 
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ChangeCoinTest {
 
     @Test
     public void test() {
-//        assertThat(new ChangeCoin().recurseFromZero(9)).isEqualTo(3);
-//        assertThat(new ChangeCoin().recurseFromZeroAndMemory(9)).isEqualTo(3);
-        assertThat(new ChangeCoin().dpTable(9)).isEqualTo(3);
+//        Assertions.assertEquals(new ChangeCoin().recurseFromZero(9),3);
+//        Assertions.assertEquals(new ChangeCoin().recurseFromZeroAndMemory(9),3);
+        Assertions.assertEquals(new ChangeCoin().dpTable(9), 3);
     }
 
     @Test

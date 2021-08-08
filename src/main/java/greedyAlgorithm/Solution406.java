@@ -1,9 +1,5 @@
 package greedyAlgorithm;
 
-import org.junit.rules.Stopwatch;
-
-import javax.imageio.plugins.jpeg.JPEGImageReadParam;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;

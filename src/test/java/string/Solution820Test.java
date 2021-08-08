@@ -1,23 +1,19 @@
 package string;
 
 
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution820Test {
     @Test
     public void test() {
         String[] input = {"time", "me", "bell"};
-        assertThat(new Solution820().minimumLengthEncoding(input)).isEqualTo(10);
+        Assertions.assertEquals(new Solution820().minimumLengthEncoding(input), 10);
     }
 
     @Test
     public void test1() {
         String[] input = {"time", "time", "time", "time"};
-        assertThat(new Solution820().minimumLengthEncoding(input)).isEqualTo(5);
+        Assertions.assertEquals(new Solution820().minimumLengthEncoding(input), 5);
     }
 }

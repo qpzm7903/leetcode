@@ -1,13 +1,12 @@
 package string;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class Solution22Test {
 
@@ -52,13 +51,13 @@ public class Solution22Test {
         };
 
         List<String> result = Arrays.asList(strings);
-        assertThat(solution22.generateParenthesis(3)).isEqualTo(result);
-        assertThat(solution22.generateParenthesisWithBackTrackingMethod(3)).isEqualTo(result);
-        assertThat(solution22.generateParenthesisWithDfsSubtraction(3)).isEqualTo(result);
-        assertThat(solution22.generateParenthesisWithDfsAdd(3)).isEqualTo(result);
-        assertThat(solution22.generateParenthesis5(3)).isEqualTo(result);
-//        assertThat(solution22.dpMethod(3)).isEqualTo(result);
-        assertThat(solution22.myMethod1(3)).isEqualTo(result);
+        Assertions.assertEquals(solution22.generateParenthesis(3), result);
+        Assertions.assertEquals(solution22.generateParenthesisWithBackTrackingMethod(3), result);
+        Assertions.assertEquals(solution22.generateParenthesisWithDfsSubtraction(3), result);
+        Assertions.assertEquals(solution22.generateParenthesisWithDfsAdd(3), result);
+        Assertions.assertEquals(solution22.generateParenthesis5(3), result);
+//        Assertions.assertEquals(solution22.dpMethod(3),result);
+        Assertions.assertEquals(solution22.myMethod1(3), result);
     }
 
     /**
@@ -76,7 +75,7 @@ public class Solution22Test {
         };
 
         List<String> result = Arrays.asList(strings);
-        assertThat(solution22.myMethod1(3)).isEqualTo(result);
+        Assertions.assertEquals(solution22.myMethod1(3), result);
     }
 
     /**
@@ -94,6 +93,6 @@ public class Solution22Test {
         };
 
         List<String> result = Arrays.asList(strings);
-        assertThat(solution22.myMethod2(3)).isEqualTo(result);
+        Assertions.assertEquals(solution22.myMethod2(3), result);
     }
 }

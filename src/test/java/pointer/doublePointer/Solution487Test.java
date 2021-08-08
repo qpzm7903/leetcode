@@ -1,19 +1,18 @@
 package pointer.doublePointer;
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 public class Solution487Test {
     @Test
     public void test_() {
-        assertThat(new Solution487().findMaxConsecutiveOnes(new int[]{1, 0, 1, 1, 0})).isEqualTo(4);
+        Assertions.assertEquals(new Solution487().findMaxConsecutiveOnes(new int[]{1, 0, 1, 1, 0}), 4);
     }
 
     @Test
     public void test_1() {
-        assertThat(new Solution487().findMaxConsecutiveOnes(new int[]{0})).isEqualTo(1);
+        Assertions.assertEquals(new Solution487().findMaxConsecutiveOnes(new int[]{0}), 1);
     }
 
 }

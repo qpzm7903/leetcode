@@ -1,9 +1,8 @@
 package dp;
 
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution322Test {
 
@@ -11,7 +10,7 @@ public class Solution322Test {
     public void test() {
         int[] coins = {2};
         int amount = 3;
-        assertThat(new Solution322().coinChange(coins, amount)).isEqualTo(-1);
+        Assertions.assertEquals(new Solution322().coinChange(coins, amount), -1);
     }
 
     @Test
@@ -19,7 +18,7 @@ public class Solution322Test {
 
         int[] coins = {1, 2, 5};
         int amount = 11;
-        assertThat(new Solution322().coinChange(coins, amount)).isEqualTo(3);
+        Assertions.assertEquals(new Solution322().coinChange(coins, amount), 3);
     }
 
 }

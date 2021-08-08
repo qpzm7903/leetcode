@@ -1,8 +1,7 @@
 package string;
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution804Test {
 
@@ -10,7 +9,7 @@ public class Solution804Test {
     public void test() {
         String[] input = {"gin", "zen", "gig", "msg"};
 
-        assertThat(new Solution804().uniqueMorseRepresentations(input)).isEqualTo(2);
+        Assertions.assertEquals(new Solution804().uniqueMorseRepresentations(input), 2);
 
     }
 

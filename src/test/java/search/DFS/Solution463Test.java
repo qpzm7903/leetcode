@@ -1,9 +1,8 @@
 package search.DFS;
 
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Solution463Test {
 
@@ -14,7 +13,7 @@ public class Solution463Test {
                 {0, 1, 0, 0},
                 {1, 1, 0, 0}};
 
-        assertThat(new Solution463().islandPerimeter(input)).isEqualTo(16);
+        Assertions.assertEquals(new Solution463().islandPerimeter(input), 16);
     }
 
 }

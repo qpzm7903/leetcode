@@ -1,8 +1,7 @@
 package recursion;
 
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 public class ClassicProblemTest {
@@ -11,7 +10,7 @@ public class ClassicProblemTest {
     @Test
     public void test_factorial() {
         int i = 3 ;
-        assertThat(ClassicProblem.factorial(i)).isEqualTo(6);
+        Assertions.assertEquals(ClassicProblem.factorial(i), 6);
     }
 
     @Test

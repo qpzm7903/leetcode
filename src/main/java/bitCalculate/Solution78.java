@@ -1,7 +1,5 @@
 package bitCalculate;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +22,5 @@ public class Solution78 {
             result.add(temp);
         }
         return result;
-    }
-
-    @Test
-    public void test() {
-        subsets(new int[]{1, 2, 3});
-
     }
 }
