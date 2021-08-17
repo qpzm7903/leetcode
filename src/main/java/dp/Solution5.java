@@ -8,6 +8,9 @@ package dp;
  */
 public class Solution5 {
 
+    /**
+     * @since 2020-08-18-18
+     */
     public static class Solution_1 {
         public String longestPalindrome(String s) {
             if (s.length() < 2) {
