@@ -12,7 +12,8 @@ public class DP338Test {
     public void should_return_0_1_1() {
         int[] expected = {0, 1, 1};
         int[] actually = dp338.countBits(2);
-        Assertions.assertEquals(actually, expected);
+
+        Assertions.assertArrayEquals(expected, actually);
     }
 
 
