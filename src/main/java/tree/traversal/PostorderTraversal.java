@@ -22,6 +22,7 @@ public class PostorderTraversal {
         }
     }
 
+    // TODO 没有很熟练
     public static  List<TreeNode> postorderTraversalByIter(TreeNode root){
         List<TreeNode> nodes = new LinkedList<>();
         Stack<TreeNode> stack = new Stack<>();
