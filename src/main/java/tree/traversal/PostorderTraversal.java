@@ -22,19 +22,25 @@ public class PostorderTraversal {
         }
     }
 
-    // todo
     public static  List<TreeNode> postorderTraversalByIter(TreeNode root){
         List<TreeNode> nodes = new LinkedList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;
+        TreeNode pre = null;
         while (cur != null || !stack.isEmpty()) {
             while (cur != null) {
                 stack.push(cur);
                 cur = cur.left;
             }
-            cur = stack.pop();
-            nodes.add(cur);
-            cur = cur.right;
+            cur = stack.peek();
+            if (cur.right != null && cur.right != pre) {
+                cur = cur.right;
+            } else {
+                cur = stack.pop();
+                nodes.add(cur);
+                pre = cur;
+                cur = null;
+            }
         }
         return nodes;
     }
